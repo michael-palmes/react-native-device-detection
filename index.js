@@ -11,16 +11,18 @@ class DetectDeviceService {
     this.pixelDensity = PixelRatio.get();
     this.width = windowSize.width;
     this.height = windowSize.height;
+    this.adjustedWidth = this.width * this.pixelDensity;
+    this.adjustedHeight = this.height * this.pixelDensity;
     
     this.isPhoneOrTablet();
     this.isIosOrAndroid();
   }
   
   isPhoneOrTablet() {
-    if(this.pixelDensity < 2 && (this.width >= 1000 || this.height >= 1000)) {
+    if(this.pixelDensity < 2 && (this.adjustedWidth >= 1000 || this.adjustedHeight >= 1000)) {
       this.isTablet = true;
       this.isPhone = false;
-    } else if(this.pixelDensity === 2 && (this.width >= 1920 || this.height >= 1920)) {
+    } else if(this.pixelDensity === 2 && (this.adjustedWidth >= 1920 || this.adjustedHeight >= 1920)) {
       this.isTablet = true;
       this.isPhone = false;
     } else {
