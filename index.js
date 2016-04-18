@@ -1,10 +1,10 @@
-const Dimensions = require('Dimensions');
-const windowSize = Dimensions.get('window');
-
 import React, {
   PixelRatio,
-  Platform
+  Platform,
+  Dimensions
 } from 'react-native';
+
+const windowSize = Dimensions.get('window');
 
 class DetectDeviceService {
   constructor() {
