@@ -13,9 +13,9 @@ Usage
 
 Import into a project file: 
 
-Non-ES6 : `const Device = require('react-native-device-detection');`
+Require Import: `const Device = require('react-native-device-detection');`
 
-ES6: Modules `import { isAndroid } from 'react-native-device-detection`;
+ES6 Modules: `import { isAndroid } from 'react-native-device-detection`;
 
 Then you can make changes to your StyleSheet like so:
 ```
