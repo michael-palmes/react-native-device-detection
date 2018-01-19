@@ -11,7 +11,11 @@ Install
 Usage
 ------------------------
 
-Import into a project file: `const Device = require('react-native-device-detection');`
+Import into a project file: 
+
+Require Import: `const Device = require('react-native-device-detection');`
+
+ES6 Modules: `import { isAndroid } from 'react-native-device-detection`;
 
 Then you can make changes to your StyleSheet like so:
 ```
@@ -41,3 +45,4 @@ Available props:
  - isAndroid
  - isPhone
  - isTablet
+ - isIphoneX
