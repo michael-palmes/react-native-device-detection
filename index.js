@@ -44,7 +44,7 @@ class DetectDeviceService {
 
   detectIphoneX(){
 	 if( Platform.OS === 'ios' &&
-		 !Platform.isTVOS &&
+		 !Platform.isPad &&
 		 !Platform.isTVOS &&
 		 (windowSize.height === 812 || windowSize.width === 812)) {
 	 	this.isIphoneX = true;
