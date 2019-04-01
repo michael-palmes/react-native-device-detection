@@ -13,12 +13,12 @@ class DetectDeviceService {
     this.height = windowSize.height;
     this.adjustedWidth = this.width * this.pixelDensity;
     this.adjustedHeight = this.height * this.pixelDensity;
-    
+
     this.isPhoneOrTablet();
     this.isIosOrAndroid();
     this.detectIphoneX();
   }
-  
+
   isPhoneOrTablet() {
     if(this.pixelDensity < 2 && (this.adjustedWidth >= 1000 || this.adjustedHeight >= 1000)) {
       this.isTablet = true;
@@ -31,7 +31,7 @@ class DetectDeviceService {
       this.isPhone = true;
     }
   }
-  
+
   isIosOrAndroid() {
     if(Platform.OS === 'ios') {
       this.isIos = true;
@@ -44,7 +44,7 @@ class DetectDeviceService {
 
   detectIphoneX(){
 	 if( Platform.OS === 'ios' &&
-      !Platform.isTVOS &&
+      !Platform.isPad &&
       !Platform.isTVOS &&
       (
         (windowSize.height === 812 || windowSize.width === 812) || // iPhone X and iPhone XS
